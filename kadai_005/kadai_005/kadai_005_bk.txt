@@ -1,0 +1,61 @@
+yoshi@nakata MINGW64 ~
+$ mkdir git_challenge
+mkdir: cannot create directory ‘git_challenge’: File exists
+
+yoshi@nakata MINGW64 ~
+$ cd git_challenge
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ git init
+Reinitialized existing Git repository in C:/Users/yoshi/git_challenge/.git/
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ touch hello_world.txt
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ echo "Hello, world!" >> hello_world.txt
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ cat hello_world.txt
+Hello, world!
+こんばんは、世界！
+Hello, world!
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ git commit -m "Add Hello, world!"
+[pull_request 02ad6a0] Add Hello, world!
+ 1 file changed, 1 insertion(+)
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ echo "こんにちは、世界！" >> hello_world.txt
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ cat hello_world.txt
+Hello, world!
+こんばんは、世界！
+Hello, world!
+こんにちは、世界！
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ git commit -m "Add こんにちは、世界！"
+[pull_request f8cc200] Add こんにちは、世界！
+ 1 file changed, 1 insertion(+)
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$ git log --oneline
+f8cc200 (HEAD -> pull_request) Add こんにちは、世界！
+02ad6a0 Add Hello, world!
+aa43c8a (origin/pull_request) 2行目をこんばんはに変更
+a6ad7bb (origin/main, main) Add こんにちは、世界！
+8debae8 Add Hello, world!
+
+yoshi@nakata MINGW64 ~/git_challenge (pull_request)
+$
